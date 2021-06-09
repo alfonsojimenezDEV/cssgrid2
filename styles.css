@@ -1,7 +1,36 @@
 .grid-container {
     display: grid;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px [line1] 100px [line2] 100px [line3] 100px [line4];
+    grid-template-columns: 1fr [col1] 1fr [col2] 1fr [col3] 1fr [col4];
     grid-gap: 5px;
     
 }
+
+.grid-item1 {
+    background: lightblue;
+    text-align: center;
+    border: black 5px solid;
+    grid-column-start: 1;
+    grid-column-end: col4;
+}
+
+.grid-item2 {
+    background: lightgreen;
+    text-align: center;
+    border: black 5px solid;
+    grid-column: 1 / col2;
+    grid-row: 2 / line3;
+}
+
+.grid-item3 {
+    background: lightcoral;
+    text-align: center;
+    grid-column: 3 / col3;
+    grid-row: 2 / line4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
