@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practicando CSS Grid</title>
-    <link rel="stylesheet" href="grid-areas.css">
+    <title>Dashboard con CSS Grid - Flexbox</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
+    <!-- Simple dashboard grid layout -->
     <div class="grid-container">
-        <div class="grid-item1">1</div>
-        <div class="grid-item2">2</div>
-        <div class="grid-item3">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quisquam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tenetur neque praesentium assumenda dolor quia maxime aliquid voluptatum! Excepturi eum ipsum quo sit, dolorem odio.</p>
-        </div>
-        <div class="grid-item4">4</div>
-        <div class="grid-item5">5</div>
-        <div class="grid-item6">6</div>
-        
+        <header class="header">
+            <div class="header__search">Search...</div>
+            <div class="header__avatar">Yor face</div>
+        </header>
+
+        <aside class="sidenav">
+            <ul class="sidenav__list">
+                <li class="sidenav__list-item">Item One</li>
+                <li class="sidenav__list-item">Item Two</li>
+                <li class="sidenav__list-item">Item Three</li>
+                <li class="sidenav__list-item">Item Four</li>
+                <li class="sidenav__list-item">Item Five</li>
+            </ul>
+
+        </aside>
+
+
+        <main class="main">main</main>
+
+
+        <footer class="footer">
+            <div class="footer_copyright">&copy; 2021</div>
+            <div class="footer__signature">Made with love by pure genius</div>
+        </footer>
     </div>
-    
+
 </body>
 </html>
