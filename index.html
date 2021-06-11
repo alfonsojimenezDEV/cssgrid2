@@ -30,13 +30,13 @@
                 
                 <li class="sidenav__list-item">Item One</li>
                 <li>
-                    <div class="navList__subheading row row--align-v-center">
+                    <div id="submenu1" class="navList__subheading row row--align-v-center">
                         <span class="navList__subheading-icon">
                             <i class="fas fa-briefcase-medical"></i>
                         </span>
                         <span class="navList__subheading-title">elemento1</span>
                     </div>
-                    <ul class="subList subList--hidden">
+                    <ul id="submenu1-elementos" class="subList subList--hidden">
                         <li class="subList__item">medical</li>
                         <li class="subList__item">vision</li>
                         <li class="subList__item">dental</li>
@@ -95,6 +95,9 @@
         const sidenavEl= $('.sidenav');
         const sidenavCloseEl = $('.sidenav__close-icon');
 
+        const el1 = $('#submenu1');
+        const menu1=$('#submenu1-elementos')
+
         // Add and remove provided class names
          function toggleClassName(el, className) {
              if (el.hasClass(className)) {
@@ -103,6 +106,11 @@
                  el.addClass(className);
              }
          }
+
+        el1.on('click', function (){
+            console.log('pulsado elemento1')
+            toggleClassName(menu1, 'subList--hidden');
+        });
 
          // Open the side nav on click
          menuIconEl.on('click', function() {

@@ -249,9 +249,10 @@ body {
     overflow: hidden;
     max-height: 200px;
     transition: all .4s ease-in-out;
+    cursor: pointer;
 }
 
-.sidenav .sublist--hidden {
+.sidenav .subList--hidden {
     visibility: hidden;
     max-height: 0;;
 }
