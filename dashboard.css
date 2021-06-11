@@ -241,18 +241,43 @@ body {
 }
 
 .sidenav .subList {
-    padding: 0; 
+    padding: 0 0 0 80px; 
     margin: 0;
     list-style-type: none;
-    background-color: darkslateblue;
+    /* background-color: darkslateblue; */
     visibility: visible;
     overflow: hidden;
     max-height: 200px;
     transition: all .4s ease-in-out;
-    cursor: pointer;
+    
 }
 
 .sidenav .subList--hidden {
     visibility: hidden;
     max-height: 0;;
+}
+
+
+.navList__subheading:after {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 6px;
+    top: 17px;
+    right: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transform: rotate(225deg);
+    transition: all 0.2s;
+}
+
+
+.navList__subheading--open:after {
+
+    transform: rotate(315deg);
+
+}
+
+.navList__subheading--open {
+    background-color: #303753;
 }
