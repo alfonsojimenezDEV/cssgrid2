@@ -110,8 +110,11 @@
         el1.on('click', function (){
             console.log('pulsado elemento1')
             toggleClassName(menu1, 'subList--hidden');
+            toggleClassName(el1, 'navList__subheading--open')
             
         });
+
+        
 
          // Open the side nav on click
          menuIconEl.on('click', function() {
